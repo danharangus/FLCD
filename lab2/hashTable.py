@@ -24,9 +24,7 @@ class HashTable:
         elif isinstance(key, int):
             # If the key is an integer, just use the key directly
             hash_value = key
-        else:
-            raise ValueError("Unsupported key type")
-
+            
         index = hash_value % size
         return index
 
