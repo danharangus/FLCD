@@ -1,0 +1,13 @@
+https://github.com/danharangus/FLCD
+
+SymbolTable - Based on a hash table
+Methods: - insert(self, name) -	inserts the symbol with the given name in the table and returns the position (or returns the position if it already exists)
+	 - get(self, name) - gets the index of the symbol in the symbol table, or None if it doesn't exist
+
+HashTable - Implemented using open addressing
+Methods: - _init_(self, initial_size, load_factor) - creates a new HashTable. Default size is 10 and default load factor is 0.7
+	 - resize(self, new_size) - resizes the hash table
+	 - hash_function(self, key, size) - hash function based on the actual hash table size
+	 - put - inserts a key-value pair in the hash table and automatically doubles the size should it be the case (using the resize method)
+	 - get - gets the value of a key from the hash table
+

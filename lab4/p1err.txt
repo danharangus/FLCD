@@ -1,0 +1,12 @@
+var a, b, 1c; //lexical error, invalid variable name
+Console.ReadInteger(a);
+Console.ReadInteger(b);
+Console.ReadInteger(1c);
+
+var min = a;
+if (b < min) {
+    min = b;
+}
+if (c < min) {
+    min = 1c;∆ //lexical error, illegal character
+}

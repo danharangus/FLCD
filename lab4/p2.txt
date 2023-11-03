@@ -1,0 +1,22 @@
+var x;
+var isPrime = true;
+Console.ReadInteger(x);
+if (x <= 1) {
+    isPrime = false;
+}
+
+if (isPrime == true) {
+    for (var d = 2; d * d <= x; d++) {
+        if (x % d == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+}
+
+if (isPrime == true) {
+    Console.Write("The number is prime);
+}
+else {
+    Console.Write("The number is NOT prime);
+}
