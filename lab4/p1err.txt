@@ -1,0 +1,12 @@
+var a, b, 1c;
+Console.ReadInteger(a);
+Console.ReadInteger(b);
+Console.ReadInteger(c);
+
+var min = a;
+if (b < min) {
+    min = b;
+}
+if (c < min) {
+    min = c;∆ 
+}
