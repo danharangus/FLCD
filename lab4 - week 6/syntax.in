@@ -1,0 +1,23 @@
+<program> ::= <statement> | <statement> <program>
+<statement> ::= <decl_stmt> | <assign_stmt> | <if_stmt> | <while_stmt> | <for_stmt> | <io_stmt> | <return_stmt>
+<identifier_list> ::= <identifier> | <identifier>, <identifier_list>
+<primitive_type> ::= int | char | string | bool
+<type> ::= <primitive_type> | <array_type>
+<decl_stmt> ::= <type> <identifier_list>;
+<operator> ::= + | - | * | / | % | < | > | <= | >= | == | != | && | ||
+<int_expr> ::= <int> | <identifier> | <int_expr> <operator> <int_expr>
+<string_expr> ::= <string> | <identifier> | <string_expr> + <string_expr>
+<bool_expr> ::= true | false | <identifier> | <bool_expr> <operator> <bool_expr> | !<bool_expr>
+<expression> ::= <int_expr> | <string_expr> | <bool_expr> | (<expression>)
+<assign_stmt> ::= <identifier> = <expression>;
+<condition> ::= <expression> | <expression> <operator> <expression>
+<block> ::= { <statement> } | { <statement> <block> }
+<if_stmt> ::= if (<condition>) <block> | if (<condition>) <block> else <block>
+<while_stmt> ::= while (<condition>) <block>
+<for_stmt> ::= for (<assign_stmt>; <condition> ; <assign_stmt>) <block>
+<return_stmt> ::= return <expression>;
+<string_read_stmt> ::= Console.ReadString <identifier>;
+<integer_read_stmt> ::= Console.ReadInteger <identifier>;
+<read_stmt> ::= <string_read_stmt> | <integer_read_stmt>
+<print_stmt> ::= Console.Print <expression>;
+<io_stmt> ::= <read_stmt>; | <print_stmt>;

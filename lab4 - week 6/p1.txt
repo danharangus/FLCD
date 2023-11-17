@@ -1,0 +1,19 @@
+var a, b, c;
+Console.ReadInteger(a);
+Console.ReadInteger(b);
+Console.ReadInteger(c);
+
+var min = a;
+
+var test = "abc";
+var test2 = 23;
+var test3 = -1
+
+if (b <= min) {
+    min = b;
+}
+if (c < min) {
+    min = c;
+}
+
+Console.Write(min);
